@@ -1,0 +1,205 @@
+.spiritual-growth-page {
+  padding-bottom: 5rem;
+}
+
+.healing-hero {
+  padding: 10rem 0 5rem;
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+  text-align: center;
+}
+
+[data-theme='dark'] .healing-hero {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, rgba(26, 35, 126, 0.4) 100%);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(30, 136, 229, 0.1);
+  color: var(--primary-blue);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.healing-hero h1 {
+  font-size: 3.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.healing-hero .subtitle {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.healing-content {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.intro-section {
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+.intro-section h2 {
+  font-size: 2.2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.intro-section p:last-child {
+  margin-bottom: 0;
+}
+
+.healing-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.details-card {
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+.details-card h3 {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-icon {
+  color: var(--primary-blue);
+}
+
+.steps-list {
+  padding-left: 1.2rem;
+}
+
+.steps-list li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.benefits-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.ailments-section {
+  padding: 3.5rem;
+  border-radius: 20px;
+}
+
+.ailments-section h2 {
+  font-size: 2.2rem;
+  color: var(--primary-blue);
+  margin-bottom: 2rem;
+}
+
+.ailments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.ailment-category h4 {
+  font-size: 1.3rem;
+  color: var(--primary-blue);
+  border-bottom: 2px solid rgba(30, 136, 229, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.ailment-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ailment-category li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+  opacity: 0.9;
+}
+
+.ailment-category li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--primary-blue);
+}
+
+.book-footer {
+  margin-top: 2rem;
+}
+
+.book-footer p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .healing-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .healing-hero .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .healing-details-grid, .ailments-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .intro-section, .details-card, .ailments-section {
+    padding: 2rem;
+  }
+}

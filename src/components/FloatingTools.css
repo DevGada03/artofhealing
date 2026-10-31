@@ -1,0 +1,58 @@
+.floating-tools {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.tool-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+}
+
+.tool-btn:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle {
+  background: white;
+  color: var(--primary-blue);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .theme-toggle {
+  background: var(--dark-card);
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn:hover {
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 768px) {
+  .floating-tools {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .tool-btn {
+    width: 50px;
+    height: 50px;
+  }
+}

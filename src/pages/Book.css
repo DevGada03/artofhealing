@@ -1,0 +1,271 @@
+.book-header {
+  padding: 8rem 0 4rem;
+  background: var(--light-blue);
+  text-align: center;
+}
+
+[data-theme='dark'] .book-header {
+  background: rgba(26, 35, 126, 0.4);
+}
+
+.book-header h1 {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.book-content {
+  padding: 4rem 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-widget {
+  width: 100%;
+  max-width: 900px;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .booking-widget {
+  background: var(--dark-card);
+}
+
+.booking-progress {
+  display: flex;
+  background: rgba(30, 136, 229, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.progress-step {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: 500;
+  color: #999;
+  position: relative;
+  font-family: var(--font-ui);
+}
+
+.progress-step.active {
+  color: var(--primary-blue);
+  background: rgba(30, 136, 229, 0.1);
+}
+
+.progress-step.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-blue);
+}
+
+.booking-body {
+  padding: 3rem;
+  min-height: 500px;
+}
+
+.flex-desktop {
+  display: flex;
+  gap: 3rem;
+}
+
+/* Calendar Styles */
+.calendar-ui {
+  flex: 1;
+  background: var(--white);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+[data-theme='dark'] .calendar-ui {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+}
+
+.cal-nav {
+  cursor: pointer;
+  color: var(--primary-blue);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.cal-day-name {
+  font-weight: 600;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.cal-day {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-ui);
+}
+
+.cal-day:not(.empty):hover {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+}
+
+[data-theme='dark'] .cal-day:not(.empty):hover {
+  background: rgba(30, 136, 229, 0.2);
+}
+
+.cal-day.selected {
+  background: var(--primary-blue) !important;
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.4);
+}
+
+/* Time Slots */
+.time-ui {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.time-btn {
+  background: transparent;
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-ui);
+  font-weight: 500;
+}
+
+[data-theme='dark'] .time-btn {
+  color: #90CAF9;
+  border-color: #90CAF9;
+}
+
+.time-btn:hover:not(:disabled) {
+  background: var(--light-blue);
+}
+
+[data-theme='dark'] .time-btn:hover:not(:disabled) {
+  background: rgba(30, 136, 229, 0.1);
+}
+
+.time-btn.selected {
+  background: var(--primary-blue) !important;
+  color: white !important;
+}
+
+.time-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #999;
+}
+
+/* Form Styles */
+.form-ui {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-family: var(--font-ui);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+[data-theme='dark'] .form-group input,
+[data-theme='dark'] .form-group select,
+[data-theme='dark'] .form-group textarea {
+  background: rgba(0,0,0,0.2);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.success-ui {
+  text-align: center;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .flex-desktop {
+    flex-direction: column;
+  }
+  
+  .booking-body {
+    padding: 2rem 1.5rem;
+  }
+}
